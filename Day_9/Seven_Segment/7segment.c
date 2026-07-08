@@ -2,6 +2,6 @@
 
 void main()
 {
-    P0 = 0x80;
+    P0 = 0x3F;
 	
 }
