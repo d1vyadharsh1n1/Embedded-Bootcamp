@@ -80,7 +80,7 @@ Examples: ARM, x86, RISC-V, MIPS.
  
 
  
-## 4–6. Memory Architectures
+## 4. Memory Architectures
  
 | Architecture | Memory/Bus | Fetch + Data Access | Pros | Cons |
 |---|---|---|---|---|
@@ -90,7 +90,7 @@ Examples: ARM, x86, RISC-V, MIPS.
  
 
  
-## 7–9. RISC vs. CISC vs. ARM
+## 5. RISC vs. CISC vs. ARM
  
 | | RISC | CISC |
 |---|---|---|
@@ -107,7 +107,7 @@ Examples: ARM, x86, RISC-V, MIPS.
 > Note: RISC is a *design philosophy*; ARM is a specific *ISA family* that follows it. They are not synonyms.
 
  
-## 10. VLIW (Very Long Instruction Word)
+## 6. VLIW (Very Long Instruction Word)
  
 One long instruction packs multiple independent operations executed simultaneously by different functional units, e.g.:
  
@@ -125,7 +125,7 @@ The **compiler** (not hardware) decides what can run in parallel.
  
 
  
-## 11. Processor Bit Width
+## 7. Processor Bit Width
  
 "N-bit processor" generally refers to the **ALU/general-purpose register width**.
  
@@ -138,7 +138,7 @@ The **compiler** (not hardware) decides what can run in parallel.
  
 
  
-## 12–14. Pipelining
+## 8. Pipelining
  
 **Stages:** Fetch → Decode → Execute → Memory Access → Write Back
  
@@ -172,7 +172,7 @@ Let k = stages, n = instructions, t = cycle time.
  
 
  
-## 15. Cycle Hierarchy
+## 9. Cycle Hierarchy
  
 **Instruction Cycle ≥ Machine Cycle ≥ Clock Cycle**
  
@@ -181,7 +181,7 @@ Let k = stages, n = instructions, t = cycle time.
 - Instruction cycle: full fetch-decode-execute; ≥1 machine cycles
 
  
-## 16. CPU Performance
+## 10. CPU Performance
  
 $$\text{CPU Time} = \text{Instruction Count} \times \text{CPI} \times \text{Clock Cycle Time} = \dfrac{\text{IC} \times \text{CPI}}{\text{Clock Rate}}$$
  
@@ -189,7 +189,7 @@ $$\text{CPU Time} = \text{Instruction Count} \times \text{CPI} \times \text{Cloc
  
 
  
-## 17. Pipelining vs. Parallel Processing
+## 11. Pipelining vs. Parallel Processing
  
 | | Pipelining | Parallel Processing |
 |---|---|---|
@@ -198,7 +198,7 @@ $$\text{CPU Time} = \text{Instruction Count} \times \text{CPI} \times \text{Cloc
  
 
  
-## 18. Build Process: ASM → HEX
+## 12. Build Process: ASM → HEX
  
 ```
 .asm --[Assembler]--> .obj --[Linker]--> .abs --[HEX Converter]--> .hex --[Programmer]--> MCU Memory
