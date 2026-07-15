@@ -19,7 +19,7 @@ Scales a voltage down using two resistors:
 $$V_{out} = V_{in} \times \dfrac{R2}{R1+R2}$$
  
 *Example:* 5 V → 3.3 V using R1 = 1 kΩ, R2 = 2 kΩ → Vout = 5×2/3 ≈ **3.33 V**
-> Good for low-current signals only — not for powering high-current loads.
+> Good for low-current signals only not for powering high-current loads.
  
 ### Level-Shifting Methods
 - Voltage divider
@@ -39,7 +39,7 @@ Microcontroller UART → MAX232 → RS-232 Device
 - 5 V Arduino output → non-tolerant 3.3 V ESP32 input: **needs** a divider/shifter.
 - ESP32 3.3 V output *may* register as HIGH on some 5 V devices — but always confirm against the datasheet thresholds.
 - Check **both** a peripheral's supply voltage and its signal voltage before connecting to a microcontroller.
----
+
  
 ## 2. Bit Masking
  
@@ -65,7 +65,7 @@ P2    = P2   & 0x0F;   // clear upper 4 bits, keep lower 4
  
 **Rule of thumb:** AND-0 clears, AND-1 preserves.
  
----
+
  
 ## 3. Instruction Set Architecture (ISA)
  
@@ -78,7 +78,7 @@ ISA = the interface between software and hardware. It defines instructions, regi
  
 Examples: ARM, x86, RISC-V, MIPS.
  
----
+
  
 ## 4–6. Memory Architectures
  
@@ -88,7 +88,7 @@ Examples: ARM, x86, RISC-V, MIPS.
 | **Harvard** | Separate | Simultaneous | Faster, pipeline-friendly | More complex hardware |
 | **Modified Harvard** | Separate I/D cache, shared main memory | Simultaneous (cache level) | Combines speed + flexibility | — |
  
----
+
  
 ## 7–9. RISC vs. CISC vs. ARM
  
@@ -105,8 +105,7 @@ Examples: ARM, x86, RISC-V, MIPS.
  
 **ARM** is an ISA family built largely on RISC principles (load/store, large register set, energy-efficient) — used in phones, MCUs, embedded systems, laptops, servers.
 > Note: RISC is a *design philosophy*; ARM is a specific *ISA family* that follows it. They are not synonyms.
- 
----
+
  
 ## 10. VLIW (Very Long Instruction Word)
  
@@ -124,7 +123,7 @@ The **compiler** (not hardware) decides what can run in parallel.
 | Simpler hardware scheduling | Larger instruction size |
 | | Poor cross-generation compatibility |
  
----
+
  
 ## 11. Processor Bit Width
  
@@ -137,7 +136,7 @@ The **compiler** (not hardware) decides what can run in parallel.
 - Data bus width
 *(An 8-bit MCU can have a 16-bit instruction word or 16-bit address bus.)*
  
----
+
  
 ## 12–14. Pipelining
  
@@ -171,7 +170,7 @@ Let k = stages, n = instructions, t = cycle time.
 | **Data** | An instruction needs a result not yet produced (`ADD R1,R2,R3` → `SUB R4,R1,R5`) | Stalling, forwarding/bypassing, scheduling |
 | **Control** | Branches/jumps — next instruction uncertain | Stalling, branch prediction, speculative execution, delayed branching |
  
----
+
  
 ## 15. Cycle Hierarchy
  
@@ -180,7 +179,7 @@ Let k = stages, n = instructions, t = cycle time.
 - Clock cycle: one clock period
 - Machine cycle: one basic operation (e.g., memory read/write); ≥1 clock cycles
 - Instruction cycle: full fetch-decode-execute; ≥1 machine cycles
----
+
  
 ## 16. CPU Performance
  
@@ -188,7 +187,7 @@ $$\text{CPU Time} = \text{Instruction Count} \times \text{CPI} \times \text{Cloc
  
 **Levers:** ↓instruction count · ↓CPI · ↓cycle time · ↑clock frequency · better pipelining/branch prediction/caching · ILP · multi-core · SIMD/vector · compiler optimization
  
----
+
  
 ## 17. Pipelining vs. Parallel Processing
  
@@ -197,7 +196,7 @@ $$\text{CPU Time} = \text{Instruction Count} \times \text{CPI} \times \text{Cloc
 | Mechanism | Overlaps *stages* of multiple instructions | Multiple units execute *separate tasks* simultaneously |
 | Analogy | One assembly line, staggered products | Multiple assembly lines running at once |
  
----
+
  
 ## 18. Build Process: ASM → HEX
  
