@@ -165,7 +165,8 @@ The DS12887 contains **128 bytes** of addressable memory/register space, address
 ---
 
 ## 7. DS12887 Pin Diagram and Functions
-![Pin Diagram](DS12887_pin_diag.png)
+![Pin Diagram]<img width="485" height="577" alt="DS12887RTC_pin_diag" src="https://github.com/user-attachments/assets/1c2dca88-9004-4d9b-9eb9-511f5cd9c53d" />
+)
 
 | Pin | Function |
 |---|---|
