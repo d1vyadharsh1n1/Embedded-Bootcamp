@@ -159,7 +159,9 @@ The DS12887 contains **128 bytes** of addressable memory/register space, address
 ---
  
 ## 7. DS12887 Pin Functions
- 
+
+
+
 | Pin | Function |
 |---|---|
 | **AD0–AD7** | Multiplexed Address/Data Bus. The same eight pins carry address during the address phase and data during the data phase. The ALE signal separates the two phases. |
