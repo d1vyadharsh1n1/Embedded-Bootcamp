@@ -8,7 +8,6 @@ A structured collection of work completed during an Embedded Systems Bootcamp. T
 
 - Keil µVision 5 (IDE & Compiler)
 - ProgISP (Flash Programming)
-- Proteus (when applicable)
 
 ---
 
