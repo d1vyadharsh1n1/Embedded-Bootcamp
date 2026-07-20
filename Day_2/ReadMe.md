@@ -14,10 +14,10 @@ The major peripherals of the 8051 include Input/Output (I/O) ports, Timers/Count
 
 The 8051 contains four 8-bit I/O ports:
 
-* Port 0
-* Port 1
-* Port 2
-* Port 3
+- Port 0
+- Port 1
+- Port 2
+- Port 3
 
 Together they provide **32 programmable input/output pins**.
 
@@ -29,20 +29,20 @@ These ports are used to interface LEDs, switches, LCDs, sensors, motors, keypads
 
 The standard 8051 contains two 16-bit timers:
 
-* Timer 0
-* Timer 1
+- Timer 0
+- Timer 1
 
 These timers can operate as:
 
-* **Timer** (counts internal clock pulses)
-* **Counter** (counts external events)
+- **Timer** (counts internal clock pulses)
+- **Counter** (counts external events)
 
 Applications include:
 
-* Generating delays
-* Measuring time intervals
-* Frequency measurement
-* Baud rate generation for UART
+- Generating delays
+- Measuring time intervals
+- Frequency measurement
+- Baud rate generation for UART
 
 ---
 
@@ -52,8 +52,8 @@ The UART enables serial communication between the 8051 and external devices such
 
 Communication occurs through two pins:
 
-* `TXD` (Transmit)
-* `RXD` (Receive)
+- `TXD` (Transmit)
+- `RXD` (Receive)
 
 The UART supports **full-duplex communication**, meaning transmission and reception can occur simultaneously.
 
@@ -65,11 +65,11 @@ Interrupts allow the processor to temporarily stop its current task and execute 
 
 The standard 8051 supports five interrupt sources:
 
-* External Interrupt 0
-* Timer 0 Overflow
-* External Interrupt 1
-* Timer 1 Overflow
-* Serial Communication Interrupt
+- External Interrupt 0
+- Timer 0 Overflow
+- External Interrupt 1
+- Timer 1 Overflow
+- Serial Communication Interrupt
 
 Interrupts improve system responsiveness by eliminating the need for continuous polling.
 
@@ -96,8 +96,8 @@ The processor executes instructions according to the system clock.
 
 For the standard 8051:
 
-* Crystal frequency = **11.0592 MHz**
-* One machine cycle = **12 clock cycles**
+- Crystal frequency = **11.0592 MHz**
+- One machine cycle = **12 clock cycles**
 
 Therefore,
 
@@ -117,10 +117,10 @@ The 8051 stores its program in Read Only Memory (ROM).
 
 Depending on the microcontroller, this may be:
 
-* Mask ROM
-* EPROM
-* EEPROM
-* Flash Memory
+- Mask ROM
+- EPROM
+- EEPROM
+- Flash Memory
 
 Program memory stores the firmware that the processor executes.
 
@@ -158,11 +158,11 @@ The bit mapping of the `PSW` register is shown below.
 | `PSW.7` |  `CY`  | Carry Flag             | Set to `1` if an arithmetic operation generates a carry out (addition) or borrow (subtraction). Used in multi-byte arithmetic operations.                |
 | `PSW.6` |  `AC`  | Auxiliary Carry Flag   | Set if there is a carry from bit 3 to bit 4 during addition. Mainly used for BCD (Binary Coded Decimal) arithmetic.                                      |
 | `PSW.5` |  `F0`  | User Flag 0            | A general-purpose flag available for use by the programmer. It has no predefined hardware function.                                                      |
-| `PSW.4` |  `RS1` | Register Bank Select 1 | Used with `RS0` to select one of the four register banks.                                                                                                |
-| `PSW.3` |  `RS0` | Register Bank Select 0 | Used with `RS1` to select one of the four register banks.                                                                                                |
+| `PSW.4` | `RS1`  | Register Bank Select 1 | Used with `RS0` to select one of the four register banks.                                                                                                |
+| `PSW.3` | `RS0`  | Register Bank Select 0 | Used with `RS1` to select one of the four register banks.                                                                                                |
 | `PSW.2` |  `OV`  | Overflow Flag          | Set when a signed arithmetic operation produces a result outside the valid range (-128 to +127).                                                         |
-| `PSW.1` |    —   | Reserved               | Reserved for future use. It should normally remain `0`.                                                                                                  |
-| `PSW.0` |   `P`  | Parity Flag            | Automatically updated after every instruction. It is set to `1` if the accumulator (`A`) contains an odd number of `1`s; otherwise it is cleared to `0`. |
+| `PSW.1` |   —    | Reserved               | Reserved for future use. It should normally remain `0`.                                                                                                  |
+| `PSW.0` |  `P`   | Parity Flag            | Automatically updated after every instruction. It is set to `1` if the accumulator (`A`) contains an odd number of `1`s; otherwise it is cleared to `0`. |
 
 #### Register Bank Selection
 
@@ -184,10 +184,10 @@ ADD A, #01H
 
 After execution:
 
-* **`CY = 0`** (no carry out of bit 7)
-* **`AC = 1`** (carry from bit 3 to bit 4)
-* **`OV = 1`** (signed overflow: +127 + 1 = -128)
-* **`P = 1`** (`80H = 10000000₂` contains one `1`, which is odd)
+- **`CY = 0`** (no carry out of bit 7)
+- **`AC = 1`** (carry from bit 3 to bit 4)
+- **`OV = 1`** (signed overflow: +127 + 1 = -128)
+- **`P = 1`** (`80H = 10000000₂` contains one `1`, which is odd)
 
 These flags help the processor determine the outcome of arithmetic and logical operations and are frequently checked using conditional branch instructions.
 
@@ -199,10 +199,10 @@ Memory mapping refers to the organization of memory locations and the signals re
 
 Different memory technologies include:
 
-* SRAM
-* Flash Memory
-* EEPROM
-* ROM
+- SRAM
+- Flash Memory
+- EEPROM
+- ROM
 
 Each technology differs in speed, volatility, and storage capability.
 
@@ -214,8 +214,8 @@ Suppose an external memory chip is specified as:
 
 This means:
 
-* Number of memory locations = **4K = 4096 locations**
-* Each location stores **16 bits**
+- Number of memory locations = **4K = 4096 locations**
+- Each location stores **16 bits**
 
 ### Address Bus
 
@@ -239,11 +239,11 @@ Since each memory location stores **16 bits**:
 
 Apart from the address and data buses, the memory requires control signals such as:
 
-* `RD`
-* `WR`
-* `CE`
-* `OE`
-* Reset (optional, depending on the device)
+- `RD`
+- `WR`
+- `CE`
+- `OE`
+- Reset (optional, depending on the device)
 
 These signals determine whether the processor is reading from or writing to memory.
 
@@ -255,9 +255,9 @@ The reset circuit initializes the microcontroller and places it into a known sta
 
 When reset is activated:
 
-* Program Counter returns to address **`0000H`**.
-* Registers return to their default values.
-* Program execution starts from the beginning.
+- Program Counter returns to address **`0000H`**.
+- Registers return to their default values.
+- Program execution starts from the beginning.
 
 Most 8051 systems use an RC reset circuit or a push-button reset switch.
 
@@ -269,8 +269,8 @@ Different microcontrollers operate at different logic voltages.
 
 | Device                   | Logic High Voltage |
 | :----------------------- | :----------------: |
-| Arduino Uno (ATmega328P) |         5 V        |
-| ESP32                    |        3.3 V       |
+| Arduino Uno (ATmega328P) |        5 V         |
+| ESP32                    |       3.3 V        |
 
 When connecting a 5 V device to a 3.3 V device, the voltage must be reduced to avoid damaging the lower-voltage device.
 
@@ -291,7 +291,3 @@ A logic level converter (level shifter) automatically converts signals between *
 This method is more reliable for bidirectional communication interfaces such as UART and I²C.
 
 ---
-
-# 6. Conclusion
-
-The 8051 microcontroller integrates several essential peripherals including I/O ports, timers, UART, interrupts, oscillator circuitry, ROM, and Special Function Registers. Its memory organization uses address, data, and control buses for accessing memory devices. A proper reset circuit ensures reliable startup, while voltage level conversion is necessary when interfacing the 8051 with modern 3.3 V microcontrollers such as the ESP32. These features make the 8051 a versatile and widely used microcontroller for embedded system applications.
